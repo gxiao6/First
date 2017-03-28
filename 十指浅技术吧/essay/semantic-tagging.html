@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>语义化标签的使用</title>
+</head>
+<body>
+
+<a href="http://www.runoob.com/html/html5-new-element.html">其他语义化标签</a>
+<br>
+
+<!-- header 头部标签 -->
+<header>
+	<h2>头部标题</h2>
+
+
+	<!-- strong 加粗标签，可用于重点强调标签内的文本； em 斜体标签，用于强调什么 -->
+	<p>3月10日，由 <strong>小鸣单车</strong> 研发的电子围栏于广州增城区正式运营，据称该技术具有 <em>无桩无线，定位</em> 精准等优点，有望解决眼下无序停放、占用公共道路等问题。</p>
+
+	<!-- del 表示删除标签； del 删除标签带有cite和datetime来表明删除的原因以及删除的时间 -->
+	<del cite="删除原因" datetime="2017/3/19">删除的内容</del>
+	<br>
+
+	<!-- abbr 标签表示缩写说明; title 表示说明内容 -->
+	<abbr title="单车大跃进，管理成难题">小鸣单车</abbr>
+
+<hr>
+	<!-- dl 用于定义列表 -->
+	<dl>
+		<dt>孔子</dt>
+			<dd>子曰：“巧言令色，鲜矣仁！”</dd>
+			<dd>孔子说：“花言巧语，装出和颜悦色的样子，这种人的仁心就很少了。”</dd>
+
+		<dt>《道德经》</dt>
+			<dd>01..道可道，非常道。名可名，非常名。</dd>
+			<dd>02.天下皆知美之为美，斯恶矣；皆知善之为善，斯不善已。</dd>
+			<dd>05.天地不仁，以万物为刍狗。圣人不仁，以百姓为刍狗。</dd>
+	</dl>
+
+<hr>
+	<!-- pre 预格式化文本标签； pre中的文本会保留空格及换行符 -->
+	<pre>
+		1.多言数穷，不如守中。
+		2.天长地久。天地所以能长且久者，以其不自生，故能长生。是以圣人后其身而身先；外其身而身存。非以其无私邪？故能成其私。
+		3.大道废，有仁义；智慧出，有大伪；六亲不和，有孝慈；国家昏乱，有忠臣。
+		4.物壮则老，是谓不道，不道早已。更多老子名言敬请关注习古堂国学网的相关文章。
+		5..希言自然。故飘风不终朝，骤雨不终日。
+	</pre>
+<hr>
+	<!-- &copy； 版权符 -->
+	<p>版权个人所有&copy;red</p>
+
+    <!-- &lt; &gt; 转义符； 如： &lt;html&gt;转义符&lt;/html&gt; 相当于 <html>转义符</html>    -->
+	&lt;html&gt;转义符&lt;/html&gt;
+
+
+</header>
+
+<hr>
+
+	<!-- nav 标签用于定义页面的导航栏区域 -->
+	<nav>
+		<ul>
+			<li>主页</li>
+			<li>相关</li>
+			<li>其他</li>
+			<li>介绍</li>
+		</ul>
+	</nav>
+
+<hr>
+
+	<!-- article 用于展示网页中独立的一块内容，譬如网页论坛的帖子、博客的文字、用户评论 -->
+	<article>
+		<h2>文字标题</h2>
+		<p>文字的内容；文字的内容；文章的内容；文章的内容；文章的内容</p>
+		<!-- footer 用于页面最底部 -->
+		<footer>
+			<p><small>版权：xxx所属，作者：小王</small></p>
+		</footer>
+	</article>
+
+<hr>
+
+	<!-- article 标签的使用 -->
+	<article>
+	<!--  文章头部 -->
+		<header>
+		<!-- 文章标题 -->
+			<h2>java自加和自减</h2>
+			<!-- 文章发表时间 -->
+			<!--  time 标签；目前所有主流浏览器都不支持 ；
+				参数 datetime	规定日期 / 时间。否则，由元素的内容给定日期 / 时间。
+				参数	 pubdate	指示 <time> 元素中的日期 / 时间是文档（或 <article> 元素）的发布日期。
+
+			-->
+			<p><time pubdate datetime="2017-03-19">2017/3/19</time></p>
+		</header>
+		<!-- 文章具体内容 -->
+		<p>
+			<a href="http://www.w3school.com.cn/tags/tag_time.asp">了解 time 标签的更多信息</a><br>
+			解析：i++和++i使用的不同点在于一个是程序完毕后的自增，一个是程序开始前的自增。“i=i++ + ++i”执行的过程是先执行i++，但是i自增1操作是稍后才执行，所以此时i还是0，然后执行++i,++i后i的值是1，执行完++i后要补增i++，所以此时i的值实际上是2,0+2=2，然后赋值给i，最终i的值是2.
+		</p>
+		<!-- 文章评论 -->
+		<article>
+			<h2>评论</h2>
+			<!-- 第一条评论 -->
+			<article>
+				<header>
+					<h3>评论者：张三</h3>
+					<p><time pubdate datetime="2017-03-19T13:14">评论时间：2017-03-19&nbsp;13:14</time></p>
+				</header>
+				<p><strong>这是评论内容</strong>写的辣鸡，看不到...</p>
+			</article>
+			<!-- 第二条评论 -->
+			<article>
+				<header>
+					<h3>评论者：王二</h3>
+					<p><time pubdate datetime="2017-03-19T14:13">评论时间： 2017-03-19&nbsp;14:13</time></p>
+				</header>
+				<p><strong>评论内容</strong>还行，给个赞</p>
+			</article>
+		</article>
+
+	</article>
+
+
+<hr>
+	
+	<!-- section 代表文档中的“节”或“段”，“段”可以是指一篇文章里按照主题的分段；“节”可以是指一个页面里的分组。 -->
+	<!-- section 的使用 -->
+	<section>
+		<h2>高阶函数</h2>
+		<p>高阶函数(higher-order function)指操作函数的函数，它接收一个或多个函数作为参数，并返回一个新函数</p>
+	</section>
+	<section>
+		<h2>不完全函数</h2>
+		<p>完全函数是一种函数变换技巧，即把一次完整的函数调用拆成多次函数调用，每次传入的实参都是完整实参的一部分，每个拆分开的函数叫做不完全函数，每次函数调用叫做不完全调用。这种函数变换的特点是每次调用都返回一个函数，直到得到最终运行结果为止</p>
+	</section>
+
+<hr>
+
+	<!-- aside 中的内容应该与主体部分内容相关 -->
+	<article>
+		<p>不尚贤，使民不争；不贵难得之货，使民不为盗；不见可欲，使民心不乱。是以圣人之治，虚其心，实其腹，弱其志，强其骨。常使民无知无欲。使夫智者不敢为也。为无为，则无不治。</p>
+		<aside>
+			<h3>作者简介</h2>
+			<p>孔子（公元前551年9月28日―公元前479年4月11日）[1-2]  ，子姓，[3] 孔氏，名丘，字仲尼，鲁国陬邑人（今山东曲阜），祖籍宋国栗邑（今河南夏邑），[4]  中国著名的大思想家、大教育家。孔子开创了私人讲学的风气，是儒家学派的创始人。</p>
+		</aside>
+	</article>
+
+<hr>
+
+	<!-- hgroup 元素代表“网页”或“section”的标题，当元素有多个层级时，该元素可以将h1到h6元素放在其内，譬如文章的主标题和副标题的组合 -->
+	<hgroup>
+		<h1>这是一篇介绍h5 语义化标签的文章</h1>
+		<h2>HTML 5</h2>
+	</hgroup>
+
+<hr>
+
+	<!--  figure标签规定独立的流内容（图像、图表、照片、代码等等）。figure 元素的内容应该与主内容相关，但如果被删除，则不应对文档流产生影响。figcaption 标签定义 figure 元素的标题（caption）。"figcaption" 元素应该被置于 "figure" 元素的第一个或最后一个子元素的位置。 -->
+	<figure>
+		<img src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3762228386,3062488930&fm=58" width="100" height="120">
+		<!-- figcaption 用于定义图片的名字 -->
+		<figcaption>孔子</figcaption>
+	</figure>
+
+<hr>
+
+	<!-- datalist 标签用于定义选项列表 -->
+	<input type="text" name="" list="taglist">
+	<datalist id="taglist">
+		<option>北京</option>
+		<option>上海</option>
+		<option>浙江</option>
+		<option>四川</option>
+	</datalist>
+
+<hr>
+
+	<!-- details 用于定义文档细节 -->
+	<details>
+		<p>孔子主张“为政以德”，用道德和礼教来治理国家是最高尚的治国之道。这种治国方略也叫“德治”或“礼治”。德治就是</p>
+		<summary>展开</summary>
+		<p>主张以道德去感化教育人。儒家认为，无论人性善恶，都可以用道德去感化教育人。而所谓“礼治”，即遵守严格的等级制度，君臣、父子、贵贱、尊卑都有严格的区别。</p>
+	</details>
+
+<hr>
+
+	<!-- menu 定义列表 -->
+	<menu>
+		<li>home</li>
+		<li>banner</li>
+		<li>content</li>
+	</menu>
+
+
+<hr>
+
+	<!-- address 地址标签 ;<address> 标签定义文档或文章的作者/拥有者的联系信息。
+						 如果 <address> 元素位于 <body> 元素内，则它表示文档联系信息。
+						 如果 <address> 元素位于 <article> 元素内，则它表示文章的联系信息。
+						 <address> 元素中的文本通常呈现为斜体。大多数浏览器会在 address 元素前后添加折行。-->
+	<address>
+		小王 <a href="mailto:webmaster@example.com">邮箱</a><br> 
+		浙江杭州<br>
+		中国
+	</address>
+
+<hr>
+
+	<!-- progress 进度条标签 -->
+	下载进度： <progress value="20" max="100"></progress>
+
+<hr>
+
+	<!-- 新增的表单元素 -->
+	<form>
+		在拾取器中选取一个颜色： <input type="color" name=""><br>
+		在日期选择器中选择一个日期： <input type="date" name=""><br>
+		定义一个日期和时间控制器（本地时间）: <input type="datetime" name=""><br>
+		定义一个日期和时间 (无时区): <input type="datetime-local" name=""><br>
+		E-mail： <input type="email" name=""><br>
+		定义月和年： <input type="month" name=""><br>
+		滑动条： <input type="range" name="" min="1" max="10"><br>
+		搜索框： <input type="search" name=""><br>
+		电话： <input type="tel" name=""><br>
+		选取时间(无时区)： <input type="time" name=""><br>
+		网址： <input type="url" name=""><br>
+		选择年和周（无时区）： <input type="week" name=""><br>
+
+		<!-- 属性的定义： <input type="number" name="">
+				disabled 规定输入字段是禁用的;
+				maxlength 规定输入字段的最长字符长度；
+				min  规定允许输入的最小值；
+				max  规定允许输入的最大值；
+				pattern 规定用于验证字段的模式;
+				readonly 规定输入字段的值无法修改；
+				required 规定输入字段的值是必须的；
+				size 规定输入字段中的可见字符数;
+				step 规定输入字段的的合法数字间隔;以下面这个为例3，就是表示往上一调为100步
+				value 规定输入字段的默认值
+		 -->
+		定义数量： <input type="number" value="666" name="" step="100">
+
+	</form>
+
+<hr>
+<br>
+<hr>
+
+	<!-- ************新增的 input属性*********** -->
+
+	<!--autocomplete="on" 用户输入自动完成功能 -->
+	<form autocomplete="on">
+		请选取或输入城市： <input type="text" list="citylist" name="">
+		<datalist id="citylist">
+			<option>杭州</option>
+			<option>桐庐</option>
+			<option>上海</option>
+			<option>青岛</option>
+			<option>青海</option>
+		</datalist>
+	</form>
+
+<br>
+
+	<!-- autofocus 页面加载的时候获取焦点 -->
+	<input type="text" name="" autofocus>
+
+<br>
+
+	<!-- form 外面做数据提交 -->
+	<form action="" method="get" id="oneform"></form>
+	<input type="text" name="" form="oneform">
+
+<br>
+
+	<!-- form 内的内容也可以修改 action (提交)地址 -->
+	<form action="1.html">
+		<input type="submit" value="提交" name="" formaction="2.html">
+	</form>
+
+<br>
+
+	<!-- file 支持多个文件上传; multiple 表示上传多个文件 -->
+	<input type="file" multiple name="">
+
+<br>
+
+	<!-- 支持自定义验证功能
+			pattern="[0-9]{6} 表示只能输入0-9的纯数字，还必须只能为6位；
+			placeholder="请输入6位数的邮编"  表示文本失焦时的提示信息
+			required 表示不能为空
+	 -->
+	<form action="">
+		请输入邮政编码： <input type="text" pattern="[0-9]{6}" placeholder="请输入6位数的邮编" required>
+		<input type="submit" value="提交" name="">
+	</form>
+
+<hr>
+
+	<!-- contenteditable 属性表示可编辑元素的内容 -->
+	<p contenteditable="true">这是一段可编辑的文本段落，你试试看</p>
+	<p hidden>这是一段被隐藏的段落</p>
+	<p>这是一段可见的段落</p>
+
+	<!-- tabindex 定义当使用 tab 键切换导航是元素的顺序-->
+	<a href="" tabindex="3">one</a>
+	<a href="" tabindex="1">two</a>
+	<a href="" tabindex="2">three</a>
+	<a href="" tabindex="4">four</a>
+
+	<!-- 	recersed 属性对列表进行降序（就是把顺序给倒立过来了）； 
+			start="5" 属性值是开始重那个数开始倒序 -->
+	<ol reversed start="5">
+		<li>最强大脑第一季</li>
+		<li>最强大脑第二季</li>
+		<li>最强大脑第三季</li>
+		<li>最强大脑第四季</li>
+	</ol>
+
+	<!-- js 的async 属性规定一旦脚本可用，则会异步执行 -->
+	<p id="p1">Hello World</p>
+	<script type="text/javascript" src="js文件" async></script>
+
+
+	<!-- js 的defer 属性规定当前页面已完成加载后，才开始执行脚本 -->
+	<script type="text/javascript" src="js文件" defer></script>
+	<p>上面的脚本从下面的段落请求信息。通常，这是不可能的，因为脚本在段落加载之前已经执行了。</p>
+	<p id="p1">Hello World!</p>
+	<p>不过，defer 属性规定脚本稍后执行。这样脚本就可以从段落中请求信息了。</p>
+
+
+
+
+
+
+
+
+
+
+<div style="margin-bottom: 300px"></div>
+</body>
+</html>

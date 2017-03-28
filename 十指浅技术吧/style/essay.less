@@ -1,0 +1,276 @@
+@charset "utf-8";
+
+//  随笔中的大背景
+.container-essay{
+  width: 100%;
+  background-color: #F5F5F5;
+
+  // 随笔中内容部分
+  .essay-content{
+    width: 90%;
+    //background-color: #f0d6e1;
+    margin: 0 auto;
+    overflow: hidden;
+
+    // 随笔中的每个小盒子
+    figure{
+      width: 22%;
+      height: 360px;
+      margin: 20px 1.5% 30px;
+      background-color: #fff;
+      float: left;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      position: relative;
+
+
+      &:hover {
+        .top-border{
+          width: 100%;
+          opacity: 1;
+          background: -webkit-linear-gradient(90deg, #7FFF00, darkviolet);
+          background: -o-linear-gradient(90deg, #7FFF00, darkviolet);
+          background: -moz-linear-gradient(90deg, #7FFF00, darkviolet);
+          background: linear-gradient(90deg, #7FFF00, darkviolet);
+        }
+        .bottom-border{
+          width: 100%;
+          opacity: 1;
+          background: -webkit-linear-gradient(-90deg, green, blue);
+          background: -o-linear-gradient(-90deg, green, blue);
+          background: -moz-linear-gradient(-90deg, green, blue);
+          background: linear-gradient(-90deg, green, blue);
+        }
+        .left-border{
+          height: 100%;
+          opacity: 1;
+          background: -webkit-linear-gradient(0deg, blue, #7FFF00);
+          background: -o-linear-gradient(0deg, blue, #7FFF00);
+          background: -moz-linear-gradient(0deg, blue, #7FFF00);
+          background: linear-gradient(0deg, blue, #7FFF00);
+
+      }
+        .right-border{
+          height: 100%;
+          opacity: 1;
+          background: -webkit-linear-gradient(180deg,darkviolet,green);
+          background: -o-linear-gradient(180deg,darkviolet,green);
+          background: -moz-linear-gradient(180deg,darkviolet,green);
+          background: linear-gradient(180deg,darkviolet,green);
+        }
+      }
+
+      // 边框动画
+      .left-border,
+      .top-border,
+      .right-border,
+      .bottom-border {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        opacity: 0;
+
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+      }
+      .left-border{
+        top: 0;
+        left: 0;
+
+      }
+      .top-border{
+        top: 0;
+        left: 0;
+
+      }
+      .right-border{
+        bottom: 0;
+        right: 0px;
+
+      }
+      .bottom-border{
+        bottom: 0;
+        right: 0px;
+
+      }
+      
+      
+      // 随笔中的图片
+      a{
+        width: 100%;
+        height: 180px;
+        img{
+          width: 100%;
+          height: 180px;
+          -webkit-border-radius: 6px 6px 0 0;
+          -moz-border-radius: 6px 6px 0 0;
+          border-radius: 6px 6px 0 0;
+
+        }
+      }
+
+    //  随笔中小盒子的内容
+      figcaption {
+
+        a,h2{
+          -moz-transition: all .8s;
+          -ms-transition: all .8s;
+          -o-transition: all .8s;
+          transition: all .8s;
+        }
+
+        // 标题
+        h2{
+          width: 100%;
+          padding: 5px 8px;
+          font-size: 20px;
+          font-weight: 500;
+          //background-color: lavender;-webkit-transition: all .5s;
+
+
+
+          -webkit-transform: translate(0px,0px);
+          -moz-transform: translate(0px,0px);
+          -ms-transform: translate(0px,0px);
+          -o-transform: translate(0px,0px);
+          transform: translate(0px,0px);
+          &:hover{
+
+            -webkit-transform: translate(10px,0px);
+            -moz-transform: translate(10px,0px);
+            -ms-transform: translate(10px,0px);
+            -o-transform: translate(10px,0px);
+            transform: translate(10px,0px);
+          }
+          &:hover a{
+            color: blue;
+          }
+          a{
+            color: #000;
+          }
+        }
+      //  中间小评论信息
+        p:nth-of-type(1){
+          width: 100%;
+          padding: 0 5px;
+          color: #D4D4D4;
+          //background-color: #c0a16b;
+          font-size: 13px;
+          line-height: 30px;
+
+          time{
+            width: 55%;
+          }
+          span{
+            display: inline-block;
+            width: 12%;
+            text-align: center;
+          }
+          i{
+            font-size: 1.5rem;
+          }
+          a{
+            color: #D4D4D4;
+            
+            &:hover{
+              color: #000;
+            }
+          }
+        }
+      //  内容
+        p:nth-of-type(2){
+          //background-color: cadetblue;
+          width: 100%;
+          height: 70px;
+          padding: 0 8px;
+          font-size: 14px;
+          text-indent: 2em;
+          letter-spacing: 2px;
+          line-height: 22px;
+          color: #000;
+
+          i{
+            font-size: 20px;
+          }
+        }
+      //  阅读
+        p:nth-of-type(3){
+          width: 100%;
+          height: 45px;
+          line-height: 45px;
+          text-align: right;
+          padding: 0 15px;
+
+          a{
+            display: inline-block;
+            height: 100%;
+            color: #3A5FCD;
+            letter-spacing: 2px;
+
+            &:hover{
+              color: #698B22;
+            }
+            i{
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+//  当设备屏幕小于 420px时
+@media screen and (max-width: 420px){
+  .essay-content{
+    min-width: 100%;
+
+    figure{
+      min-width: 97%;
+    }
+  }
+}
+//  当设备屏幕小于 720px 大于420px 时
+@media screen and (min-width: 421px) and (max-width: 720px){
+  .essay-content{
+    min-width: 80%;
+
+    figure{
+      min-width: 80%;
+      margin: 20px 10% 30px !important;
+    }
+  }
+}
+//  当设备屏幕小于 900px 大于 720px 时
+@media screen and (min-width: 721px) and (max-width: 900px){
+  .essay-content{
+    min-width: 100%;
+
+    figure{
+      min-width: 45%;
+      margin: 20px 2.5% 30px !important;
+    }
+  }
+}
+//  当设备屏幕小于 1250px 大于 900px 时
+@media screen and (min-width: 901px) and (max-width: 1250px){
+  .essay-content{
+    min-width: 100%;
+
+    figure{
+      min-width: 30%;
+    }
+  }
+}
+
+
+
+
+
+

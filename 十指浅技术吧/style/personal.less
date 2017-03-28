@@ -1,0 +1,596 @@
+
+@charset "utf-8";
+
+// 个人简介
+.personal-container{
+  width: 100%;
+
+//  居中盒子
+  article{
+    width: 80%;
+    margin: 0 10% 200px;
+
+  //  头部 字体图标
+    header{
+      width: 100%;
+      height: 80px;
+      margin-bottom: 20px;
+
+      h2{
+        width: 100%;
+        text-align: center;
+        line-height: 80px;
+
+        a{
+          color: rgba(200,200,200,1);
+          margin: 0 5px;
+          -webkit-transition: color 1s;
+          -moz-transition: color 1s;
+          -ms-transition: color 1s;
+          -o-transition: color 1s;
+          transition: color 1s;
+
+          &:hover{
+            color: rgba(100,100,100,1);
+          }
+        }
+      }
+    }
+
+    // 详细内容
+
+    .personal-container-content{
+      width: 80%;
+      margin: 0 10% 50px;
+      padding: 5px 0;
+      text-align: center;
+      font-size: 25px;
+      color: #000;
+      background-color: #F5F5F5;
+      -webkit-border-radius: 2%;
+      -moz-border-radius: 2%;
+      border-radius: 2%;
+
+      h2{
+        width: 100%;
+        font-size: 27px;
+        color: #000;
+        height: 60px;
+        line-height: 60px;
+        letter-spacing: 2px;
+        margin: 2% 0 0;
+        //background-color: floralwhite;
+      }
+
+      p:nth-of-type(1){
+        font-size: 19px;
+        height: 30px;
+        line-height: 30px;
+        //background-color: silver;
+
+        small{
+          margin: 0 2%;
+        }
+      }
+      p:nth-of-type(2){
+        color: green;
+        //background-color: #c0a16b;
+      }
+      p:nth-of-type(3){
+        font-size: 18px;
+        //background-color: #E2E8FF;
+        width: 80%;
+        margin: 2% 10% 0;
+        text-indent: 2em;
+        line-height: 25px;
+        text-align: left;
+        letter-spacing: 2px;
+      }
+    }
+
+
+  //  具体内容介绍
+    section{
+      width: 66%;
+      height: 460px;
+      margin: 0 17%;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      position: relative;
+      -webkit-box-shadow: 0 5px 5px #CDC5BF;
+      -moz-box-shadow: 0 5px 5px #CDC5BF;
+      box-shadow: 0 5px 5px #CDC5BF;
+
+      // 屏幕内容
+      .television{
+        width: 100%;
+        height: 400px;
+        background-color: rgba(0,0,0,0.2);
+        -webkit-border-radius: 10px 10px 0 0;
+        -moz-border-radius: 10px 10px 0 0;
+        border-radius: 10px 10px 0 0;
+
+        // 屏幕中图片
+        img{
+          width: 100%;
+          height: 400px;
+          -webkit-border-radius: 8px 8px 0 0;
+          -moz-border-radius: 8px 8px 0 0;
+          border-radius: 8px 8px 0 0;
+        }
+
+      }
+      //品牌
+      .television-brand{
+        width: 100%;
+        height: 60px;
+        background-color: #e6e8ea;
+        text-align: center;
+        line-height: 60px;
+        -webkit-border-radius: 0 0 10px 10px;
+        -moz-border-radius: 0 0 10px 10px;
+        border-radius: 0 0 10px 10px;
+
+        i{
+          font-size: 3.6rem;
+          color: #333;
+        }
+      }
+      // 支撑架底座
+      .television-frame{
+        width: 20%;
+        height: 60px;
+        background-color: #e6e8ea;
+        position: absolute;
+        left: 50%;
+        top: 460px;
+        margin-left: -10%;
+
+        &::after{
+          content: '';
+          width: 120%;
+          height: 3px;
+          position: absolute;
+          top: -4px;
+          left: -10%;
+          -webkit-box-shadow: 0 5px 5px #CDC5BF;
+          -moz-box-shadow: 0 5px 5px #CDC5BF;
+          box-shadow: 0 5px 5px #CDC5BF;
+        }
+
+      }
+
+      //  最下角
+      .television-footer{
+        width: 30%;
+        height: 5px;
+        background-color: #e6e8ea;
+        position: absolute;
+        top: 520px;
+        left: 50%;
+        margin-left: -15%;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius:5px;
+        -webkit-box-shadow: 0 5px 5px #707070;
+        -moz-box-shadow: 0 5px 5px #707070;
+        box-shadow: 0 5px 5px #707070;
+
+        &::before{
+          content: '';
+          width: 80%;
+          height: 5px;
+          position: absolute;
+          left: 10%;
+          top: -8px;
+          -webkit-border-radius: 5px 5px 0 0;
+          -moz-border-radius: 5px 5px 0 0;
+          border-radius: 5px 5px 0 0;
+          -webkit-box-shadow: 0 5px 5px #e6e8ea;
+          -moz-box-shadow: 0 5px 5px #e6e8ea;
+          box-shadow: 3px 5px 5px #e6e8ea;
+        }
+      }
+    }
+  }
+
+
+}
+
+
+
+//  当设备屏幕小于 420px时
+@media screen and (max-width: 420px) {
+  .personal-container {
+    min-width: 100%;
+    margin: 0;
+
+    article {
+      min-width: 100%;
+      overflow: hidden;
+      margin: 0;
+
+      section {
+        min-width: 96%;
+        height: 240px !important;
+        margin: 0 2% 200px !important;
+        -webkit-box-shadow: 0 5px 5px #CDC5BF;
+        -moz-box-shadow: 0 5px 5px #CDC5BF;
+        box-shadow: 0 5px 5px #CDC5BF;
+
+        .television {
+          width: 100% !important;
+          height: 200px !important;
+
+          img {
+            width: 100%;
+            height: 200px !important;
+          }
+        }
+        .television-brand {
+          height: 40px !important;
+          line-height: 40px;
+
+          i {
+            font-size: 28px;
+          }
+        }
+        .television-frame {
+          width: 20%;
+          height: 40px;
+          position: absolute;
+          top: 240px;
+        }
+        .television-footer {
+          width: 40%;
+          position: absolute;
+          top: 280px;
+          left: 50%;
+          margin-left: -20%;
+          -webkit-box-shadow: 0 5px 5px #707070;
+          -moz-box-shadow: 0 5px 5px #707070;
+          box-shadow: 0 5px 5px #707070;
+
+          &::before {
+            -webkit-box-shadow: 0 5px 5px #e6e8ea;
+            -moz-box-shadow: 0 5px 5px #e6e8ea;
+            box-shadow: 3px 5px 5px #e6e8ea;
+          }
+        }
+      }
+    }
+  }
+}
+//  当设备屏幕小于 550px 大于420px 时
+@media screen and (min-width: 421px) and (max-width: 550px) {
+  .personal-container {
+    min-width: 80%;
+    margin: 0;
+
+    article {
+      min-width: 100%;
+      overflow: hidden;
+      margin: 0;
+
+      section {
+        min-width: 96%;
+        height: 270px !important;
+        margin: 0 2% 200px !important;
+        -webkit-box-shadow: 0 5px 5px #CDC5BF;
+        -moz-box-shadow: 0 5px 5px #CDC5BF;
+        box-shadow: 0 5px 5px #CDC5BF;
+
+        .television {
+          width: 100% !important;
+          height: 230px !important;
+
+          img {
+            width: 100%;
+            height: 230px !important;
+          }
+        }
+        .television-brand {
+          height: 40px !important;
+          line-height: 40px;
+
+          i {
+            font-size: 28px;
+          }
+        }
+        .television-frame {
+          width: 20%;
+          height: 40px;
+          position: absolute;
+          top: 270px;
+        }
+        .television-footer {
+          width: 40%;
+          position: absolute;
+          top: 310px;
+          left: 50%;
+          margin-left: -20%;
+          -webkit-box-shadow: 0 5px 5px #707070;
+          -moz-box-shadow: 0 5px 5px #707070;
+          box-shadow: 0 5px 5px #707070;
+
+          &::before {
+            -webkit-box-shadow: 0 5px 5px #e6e8ea;
+            -moz-box-shadow: 0 5px 5px #e6e8ea;
+            box-shadow: 3px 5px 5px #e6e8ea;
+          }
+        }
+      }
+    }
+  }
+}
+//  当设备屏幕小于 720px 大于 550px 时
+@media screen and (min-width: 551px) and (max-width: 720px) {
+  .personal-container {
+    min-width: 80%;
+    margin: 0;
+
+    article {
+      min-width: 100%;
+      overflow: hidden;
+      margin: 0;
+
+      section {
+        min-width: 90%;
+        height: 300px !important;
+        margin: 0 5% 200px !important;
+        -webkit-box-shadow: 0 5px 5px #CDC5BF;
+        -moz-box-shadow: 0 5px 5px #CDC5BF;
+        box-shadow: 0 5px 5px #CDC5BF;
+
+        .television {
+          width: 100% !important;
+          height: 260px !important;
+
+          img {
+            width: 100%;
+            height: 260px !important;
+          }
+        }
+        .television-brand {
+          height: 40px !important;
+          line-height: 40px;
+
+          i {
+            font-size: 28px;
+          }
+        }
+        .television-frame {
+          width: 20%;
+          height: 40px;
+          position: absolute;
+          top: 300px;
+        }
+        .television-footer {
+          width: 40%;
+          position: absolute;
+          top: 340px;
+          left: 50%;
+          margin-left: -20%;
+          -webkit-box-shadow: 0 5px 5px #707070;
+          -moz-box-shadow: 0 5px 5px #707070;
+          box-shadow: 0 5px 5px #707070;
+
+          &::before {
+            -webkit-box-shadow: 0 5px 5px #e6e8ea;
+            -moz-box-shadow: 0 5px 5px #e6e8ea;
+            box-shadow: 3px 5px 5px #e6e8ea;
+          }
+        }
+      }
+    }
+  }
+}
+//  当设备屏幕小于 900px 大于 720px 时
+@media screen and (min-width: 721px) and (max-width: 900px) {
+  .personal-container {
+    min-width: 80%;
+    margin: 0;
+
+    article {
+      min-width: 100%;
+      overflow: hidden;
+      margin: 0;
+
+      section {
+        min-width: 82%;
+        height: 340px !important;
+        margin: 0 9% 200px !important;
+        -webkit-box-shadow: 0 5px 5px #CDC5BF;
+        -moz-box-shadow: 0 5px 5px #CDC5BF;
+        box-shadow: 0 5px 5px #CDC5BF;
+
+        .television {
+          width: 100% !important;
+          height: 300px !important;
+
+          img {
+            width: 100%;
+            height: 300px !important;
+          }
+        }
+        .television-brand {
+          height: 40px !important;
+          line-height: 40px;
+
+          i {
+            font-size: 28px;
+          }
+        }
+        .television-frame {
+          width: 20%;
+          height: 40px;
+          position: absolute;
+          top: 340px;
+        }
+        .television-footer {
+          width: 40%;
+          position: absolute;
+          top: 380px;
+          left: 50%;
+          margin-left: -20%;
+          -webkit-box-shadow: 0 5px 5px #707070;
+          -moz-box-shadow: 0 5px 5px #707070;
+          box-shadow: 0 5px 5px #707070;
+
+          &::before {
+            -webkit-box-shadow: 0 5px 5px #e6e8ea;
+            -moz-box-shadow: 0 5px 5px #e6e8ea;
+            box-shadow: 3px 5px 5px #e6e8ea;
+          }
+        }
+      }
+    }
+  }
+}
+//  当设备屏幕小于 1220px 大于 900px 时
+@media screen and (min-width: 901px) and (max-width: 1220px) {
+  .personal-container {
+    min-width: 80%;
+    margin: 0;
+
+    article {
+      min-width: 100%;
+      overflow: hidden;
+      margin: 0;
+
+      section {
+        min-width: 74%;
+        height: 380px !important;
+        margin: 0 13% 200px !important;
+        -webkit-box-shadow: 0 5px 5px #CDC5BF;
+        -moz-box-shadow: 0 5px 5px #CDC5BF;
+        box-shadow: 0 5px 5px #CDC5BF;
+
+        .television {
+          width: 100% !important;
+          height: 335px !important;
+
+          img {
+            width: 100%;
+            height: 335px !important;
+          }
+        }
+        .television-brand {
+          height: 45px !important;
+          line-height: 45px;
+
+          i {
+            font-size: 28px;
+          }
+        }
+        .television-frame {
+          width: 20%;
+          height: 40px;
+          position: absolute;
+          top: 380px;
+        }
+        .television-footer {
+          width: 40%;
+          position: absolute;
+          top: 420px;
+          left: 50%;
+          margin-left: -20%;
+          -webkit-box-shadow: 0 5px 5px #707070;
+          -moz-box-shadow: 0 5px 5px #707070;
+          box-shadow: 0 5px 5px #707070;
+
+          &::before {
+            -webkit-box-shadow: 0 5px 5px #e6e8ea;
+            -moz-box-shadow: 0 5px 5px #e6e8ea;
+            box-shadow: 3px 5px 5px #e6e8ea;
+          }
+        }
+      }
+    }
+  }
+}
+//  当设备屏幕大于 1220px 时
+@media screen and (min-width: 1221px) {
+  .personal-container {
+    min-width: 80%;
+    margin: 0 10%;
+
+    article {
+      min-width: 80%;
+      overflow: hidden;
+      margin: 0;
+
+      section {
+        min-width: 74%;
+        height: 460px !important;
+        margin: 0 13% 200px !important;
+        -webkit-box-shadow: 0 5px 5px #CDC5BF;
+        -moz-box-shadow: 0 5px 5px #CDC5BF;
+        box-shadow: 0 5px 5px #CDC5BF;
+
+        .television {
+          width: 100% !important;
+          height: 400px !important;
+
+          img {
+            width: 100%;
+            height: 400px !important;
+          }
+        }
+        .television-brand {
+          height: 60px !important;
+          line-height: 60px;
+
+          i {
+            font-size: 32px;
+          }
+        }
+        .television-frame {
+          width: 20%;
+          height: 60px;
+          position: absolute;
+          top: 460px;
+        }
+        .television-footer {
+          width: 40%;
+          position: absolute;
+          top: 520px;
+          left: 50%;
+          margin-left: -20%;
+          -webkit-box-shadow: 0 5px 5px #707070;
+          -moz-box-shadow: 0 5px 5px #707070;
+          box-shadow: 0 5px 5px #707070;
+
+          &::before {
+            -webkit-box-shadow: 0 5px 5px #e6e8ea;
+            -moz-box-shadow: 0 5px 5px #e6e8ea;
+            box-shadow: 3px 5px 5px #e6e8ea;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
