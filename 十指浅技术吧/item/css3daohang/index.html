@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="关键词1，关键词二">
+    <meta name="Description" content="描述">
+    <title>Title</title>
+	<style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+		body{
+			background: url("images/bodyBg.jpg");
+		}
+		/*   最大盒子    */
+		#nav{
+			width: 950px;
+			height: 500px;
+			margin: 100px auto;
+		}
+		#nav ul{
+			list-style: none;
+		}
+		#nav ul li{
+			width: 180px;
+			height: 105px;
+			background: rgba(0,0,0,0.7);
+			float: left;
+			margin: 30px 5px;
+			position: relative;
+		}
+		/*  为了设置总样式中的第二排的四个盒子排列，目的是挤下去一个 */
+		#nav ul li:nth-child(6){
+			margin-left: 95px;
+		}
+		#nav ul li:before,
+		#nav ul li:after {
+			content: '';
+			display: block;
+			width: 180px;
+			height:105px;
+			background: rgba(0,0,0,0.7);
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		#nav ul li:before{
+			/*  css3 旋转  */
+			transform: rotate(60deg); 
+		}
+		#nav ul li:after{
+			transform: rotate(-60deg);
+		}
+		#nav ul li img{
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			z-index: 666;
+			/*  图片旋转时间,过渡 */
+			transition: 0.8s;
+
+		}
+		/*  图片旋转放大动画  */
+		#nav ul li img:hover{
+			/*-----    旋转角度 、 缩放    -- ---*/
+			transform: rotate(360deg) scale(1.3);
+		}
+
+
+	</style>
+</head>
+<body>
+
+    <div id="nav">
+		<ul>
+			<li><img src="images/1.png"></li>
+			<li><img src="images/2.png"></li>
+			<li><img src="images/3.png"></li>
+			<li><img src="images/4.png"></li>
+			<li><img src="images/5.png"></li>
+			<li><img src="images/6.png"></li>
+			<li><img src="images/7.png"></li>
+			<li><img src="images/8.png"></li>
+			<li><img src="images/9.png"></li>
+			<li><img src="images/10.png"></li>
+			<li><img src="images/11.png"></li>
+			<li><img src="images/12.png"></li>
+			<li><img src="images/13.png"></li>
+			<li><img src="images/14.png"></li>
+		</ul>
+	</div>
+
+</body>
+</html>

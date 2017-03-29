@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="music.css">
+</head>
+<body>
+
+
+
+<div id="phone">
+    <div class="top"></div>
+    <div class="title">海阔天空</div>
+    <div class="singer">Beyone</div>
+    <div id="play" class="play"></div>
+    <div class="lrc">
+        <div id="content"></div>
+    </div>
+</div>
+
+<audio src="music/Beyond-海阔天空.mp3" id="music"></audio>
+
+<textarea id="text" name="" cols="30" rows="10" style="display: none;">
+[00:02.21]海阔天空 - Beyond
+[00:05.36]词：黄家驹
+[00:07.28]曲：黄家驹
+[00:18.50]今天我
+[00:21.94]寒夜里看雪飘过
+[00:25.02]怀着冷却了的心窝飘远方
+[00:30.90]风雨里追赶
+[00:34.01]雾里分不清影踪
+[00:37.13]天空海阔你与我
+[00:40.20]可会变
+[00:41.51]谁没在变
+[00:43.49]多少次
+[00:46.83]迎着冷眼与嘲笑
+[00:49.95]从没有放弃过心中的理想
+[00:55.81]一刹那恍惚
+[00:58.95]若有所失的感觉
+[01:02.05]不知不觉已变淡
+[01:05.16]心里爱
+[01:06.46]谁明白我
+[01:08.67]原谅我这一生不羁放纵爱自由
+[01:15.69]也会怕有一天会跌倒oh no
+[01:21.91]背弃了理想谁人都可以
+[01:28.21]哪会怕有一天只你共我
+[01:42.60]今天我
+[01:46.01]寒夜里看雪飘过
+[01:49.14]怀着冷却了的心窝飘远方
+[01:55.04]风雨里追赶
+[01:58.16]雾里分不清影踪
+[02:01.23]天空海阔你与我
+[02:04.32]可会变
+[02:05.79]谁没在变
+[02:07.84]原谅我这一生不羁放纵爱自由
+[02:14.87]也会怕有一天会跌倒oh no
+[02:21.14]背弃了理想谁人都可以
+[02:27.33]哪会怕有一天只你共我oh yeah
+[03:08.30]仍然自由自我
+[03:11.73]永远高唱我歌
+[03:14.91]走遍千里
+[03:19.54]原谅我这一生不羁放纵爱自由
+[03:26.62]也会怕有一天会跌倒oh no
+[03:32.76]背弃了理想谁人都可以
+[03:39.03]哪会怕有一天只你共我
+[03:45.38]背弃了理想谁人都可以
+[03:51.52]哪会怕有一天只你共我 oh yeah
+[03:57.16]原谅我这一生不羁放纵爱自由 oh yeah
+[04:03.89]也会怕有一天会跌倒
+[04:10.21]背弃了理想谁人都可以
+[04:16.41]哪会怕有一天只你共我
+</textarea>
+
+
+<script>
+
+var oPlay = document.getElementById("play");
+var oMusic = document.getElementById("music");
+var oText = document.getElementById("text");
+var oContent = document.getElementById("content");
+
+var onOff = true;
+oPlay.onclick = function () {
+    if (onOff){
+        oMusic.play(); // 播放
+        this.className = 'play rotate';
+    }else{
+        oMusic.pause();  // 暂停
+        this.className = 'play';
+    }
+    onOff = !onOff;  // 每点击一次就相反状态
+};
+
+//插入歌词
+var lrc = oText.value.split("[");  // 从 [ 出割开
+var html = '';
+for (var i=0;i<lrc.length;i++){
+    var lrcArr = lrc[i].split("]");
+    //console.log(lrcArr[0]);//时间
+    // console.log(lrcArr[1]);//歌词
+
+
+    var time = lrcArr[0].split("."); // 对时间进行切割
+    //console.log(time);
+    var times = time[0].split(":");
+    //console.log(times);
+    // times[0]分钟 ; times[1] 秒钟
+    var sec = times[0]*60 + times[1]*1;
+
+    if (lrcArr[1]){
+        html += "<p id="+sec+">"+ lrcArr[1] +"</p>";
+    }
+}
+oContent.innerHTML = html; // 往 content中插入歌词
+var aP = oContent.getElementsByTagName("p");
+var num = 0;
+
+//     监听音乐进度
+// timeupdate 监听时间事件
+oMusic.addEventListener("timeupdate",function () {
+    console.log(oMusic.currentTime); // 获取音乐当前的播放时间
+    var curr = parseInt(oMusic.currentTime); // 对时间取整
+    if (document.getElementById(curr)){
+        for(var i=0;i<aP.length;i++){
+            aP[i].style.color = "#f5f5f5";
+        }
+        // 当前播放的歌词为红色
+        document.getElementById(curr).style.color = "#ff6700";
+
+        // 让歌词往上移
+        if(aP[7+num].id == curr){
+            oContent.style.top = -20*num + 'px';
+            num ++;
+        }
+    }
+
+});
+
+
+
+</script>
+
+</body>
+</html>

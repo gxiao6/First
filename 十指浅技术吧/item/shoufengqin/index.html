@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小米</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        #box {
+            width: 1200px;
+            height: 460px;
+            border: 1px solid black;
+            margin: 50px auto 0;
+            overflow: hidden;
+            background-color: rgba(250, 120, 134, 1);
+        }
+        #box ul{
+            width: 1400px;
+        }
+        #box ul li {
+            width: 240px;
+            float: left;
+            height: 460px;
+            /*background-image: url("images/1.jpg");*/
+        }
+       /* #box ul .two {
+            background-image: url("images/2.jpg");
+        }*/
+    </style>
+</head>
+<body>
+
+<div id="box">
+    <ul>
+        <li></li>
+        <li class="two"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+
+<script src="../my.js"></script>
+<script>
+
+    var lis = document.getElementsByTagName('li');
+    var len = lis.length;
+
+    for(var i=0; i<len; i++){
+        //1  设定背景
+        lis[i].style.backgroundImage = "url(images/"+(i+1)+".jpg)";
+
+        //2  绑定事件
+        lis[i].onmouseover = function () {
+            for(var j=0; j<len; j++){
+                animate(lis[j], {width: 100});
+            }
+            animate(this, {width: 800});
+        };
+        lis[i].onmouseout = function () {
+            for(var j=0; j<len; j++){
+                animate(lis[j], {width: 240});
+            }
+        };
+    }
+
+
+    animate(obj, {width: 400, opacity: 50})
+
+</script>
+
+</body>
+</html>

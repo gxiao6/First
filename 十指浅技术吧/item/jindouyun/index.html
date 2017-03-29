@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        ul {
+            list-style: none;
+        }
+        .nav {
+            width: 650px;
+            height: 42px;
+            border: 1px solid red;
+            border-radius: 5px;
+            margin: 100px auto 0;
+            background: url("images/rss.png") no-repeat right #fff;
+            position: relative;
+        }
+
+        .nav .cloud {
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 83px;
+            height: 42px;
+            background: url("images/cloud.gif") no-repeat;
+        }
+        .nav ul {
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+        .nav li {
+            width: 83px;
+            height: 42px;
+            float: left;
+            text-align: center;
+            line-height: 42px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav">
+    <span id="cloud" class="cloud"></span>
+    <ul id="nav_item">
+        <li>公司首页</li>
+        <li>新闻娱乐</li>
+        <li>体育新闻</li>
+        <li>帅哥美女</li>
+        <li>社会新闻</li>
+        <li>亚洲热点</li>
+        <li>造福社会</li>
+    </ul>
+</div>
+
+<script>
+    var cloud = document.getElementById("cloud");
+    var nav_item = document.getElementById("nav_item");
+    var lis = nav_item.children;
+    var leader = 0, target = 0, current = 0;
+    var li_item;
+    for (var i=0, len=lis.length; i<len; i++){
+        li_item = lis[i];
+        li_item.onmouseover = function () {
+            console.log(this.offsetLeft);
+            target = this.offsetLeft;
+        };
+        li_item.onmouseout = function () {
+            target = current;
+        };
+        li_item.onclick = function () {
+            current = this.offsetLeft;
+        }
+    }
+
+    setInterval(function () {
+        leader = leader + (target-leader)/10;
+        cloud.style.left = leader + 'px';
+    }, 10);
+
+
+</script>
+
+</body>
+</html>

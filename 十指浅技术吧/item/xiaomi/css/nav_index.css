@@ -1,0 +1,818 @@
+/*修改全局字体*/
+body{
+    font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+
+html,body,li,ul,a,span,img,h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+}
+/*--------------        顶部导航栏样式开始       -----------------*/
+.header_top{
+    width:auto;
+    height: 40px;
+    background-color: #333;
+}
+/*导航栏顶部*/
+.header_top .nav{
+    width: 1226px;
+    height: 40px;
+    background-color: #333;
+    /*position: relative;*/
+    color: #b0b0b0;
+    line-height: 40px;
+    margin: 0 auto;
+}
+/*修改了导航栏的所有a标签样式*/
+.header_top .nav a{
+    text-decoration: none;
+    color: #b0b0b0;
+    font-size: 12px;
+}
+.header_top .nav a:hover{
+    color: white;
+}
+/*修改span标签的样式*/
+.header_top .nav span.sep{
+    margin: 0 3px;
+    color: #424242;
+}
+
+/*导航栏左边的样式*/
+.header_top .nav .left{
+    width: 610px;
+    height: 40px;
+    position: relative;
+    float: left;
+}
+/*登陆*/
+.header_top .nav .login{
+    float: right;
+    margin-right: 20px;
+}
+/*导航栏右边购物车的样式*/
+.header_top .nav .right{
+    float: right;
+    background-color: #424242;
+    text-align: center;
+    position: relative;
+}
+
+.header_top .nav .right a{
+    width: 120px;
+    height: 40px;
+    display: block;
+    color: #b0b0b0;
+    font-weight: 600;
+    /*background-color: white;*/
+}
+/*购物车下边小弹框*/
+.header_top .nav .right .button_shopping{
+    width: 316px;
+    height: 98px;
+    line-height: 98px;
+    background-color: white;
+    position: absolute;
+    right:0;
+    top: 40px;
+    display: none;
+    /*阴影*/
+    box-shadow:  0 10px 11px rgba(0,0,0,0.18);
+    z-index: 33;
+}
+
+/*--------------        顶部导航栏样式结束       -----------------*/
+
+
+
+/*--------------        搜索框样式开始       -----------------*/
+
+.header_nav{
+    height: 100px;
+}
+.header_center{
+    width: 1226px;
+    height: 100px;
+    margin: 0 auto;
+    /*background-color: antiquewhite;*/
+    position: relative;
+}
+.header_center .left{
+    width: 234px;
+    height: 100px;
+    /*background-color: #3c763d;*/
+    float: left;
+}
+/*     左边  logo图标      */
+.header_center .left a img{
+    width: 55px;
+    height: 55px;
+    margin-top: 22px;
+}
+/*--------    logo旁边的动画图片     --------*/
+.header_center .left .img_git{
+    float: right;
+    width: 160px;
+    height: 60px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/*-----------    中间的  小米手机栏      -----*/
+.header_center .center{
+    width: 680px;
+    height: 100px;
+    float: left;
+    /*position: relative;*/
+    /*top: 26px;*/
+    /*left: 10px;*/
+    /*background-color: green;*/
+    font-size: 16px;
+}
+.header_center .center .center_ul{
+    list-style: none;
+    width: 680px;
+    height: 100px;
+    line-height: 100px;
+    /*position: relative;*/
+}
+.header_center .center .center_ul .center_li{
+    float: left;
+    position: relative;
+    left: 0;
+}
+.header_center .center .center_ul .center_li a:hover{
+    color: #ff6700;
+}
+/*去除a标签的样式*/
+.header_center .center .center_ul .center_li .center_a{
+    /*font-size: 16px;*/
+    text-decoration: none;
+    color: black;
+    padding: 26px 10px 38px 10px;
+}
+
+
+/*--------      右边搜索框     --------*/
+.header_center .right{
+    float: right;
+    width: 292px;
+    /*height: 50px;*/
+    background-color: #e4b9b9;
+    margin-top: 25px;
+}
+.header_center .right_search{
+    position: relative;
+    width: 292px;
+    height: 50px;
+}
+.header_center .right input{
+    /*去除input 标签选中的默认样式边框*/
+    outline-style: none;
+}
+.header_center .right .search{
+    width: 218px;
+    height: 49px;
+    border: 1px solid #dfdfdf;
+    padding: 0 10px;
+    float: left;
+    z-index: 30;
+}
+.header_center .right .btn{
+    width: 52px;
+    height: 50px;
+    background: url("../img/searcg_one.png") no-repeat -2px -2px;
+    /*background-size: x,y;     设置图片的 x，y 轴*/
+    background-size: 55px 52px;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+}
+.header_center .right .btn:hover{
+    background: url("../img/search_tow.png") no-repeat -2px -2px;
+    background-size: 55px 52px;
+    border: 1px solid #ff6700;
+}
+/*     搜索框里面div的样式          */
+.header_center .right .mix{
+    width: 147px;
+    height: 18px;
+    font-size: 12px;
+    position: absolute;
+    top: 17px;
+    right: 65px;
+    text-align: center;
+    transition: all .2s;
+}
+.header_center .right .mix a{
+    text-decoration: none;
+    color: #757575;
+}
+.header_center .right .mix a:hover{
+    background-color: #ff6700;
+    color: white;
+}
+.header_center .right .mix .small_first {
+    display: inline-block;
+    background-color: #eee;
+    width: 55px;
+    height: 18px;
+}
+.header_center .right .mix .small_second{
+    display: inline-block;
+    background-color: #eee;
+    width: 82px;
+    height: 18px;
+    margin-left: 5px;
+}
+
+
+/*--------  *********      中间隐藏的下拉弹框     ***********     --------*/
+
+.active_box{
+    /*width: 100%;*/
+    background-color: white;
+    height: 230px;
+    border-top: 1px solid #eeeeee;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.18);
+    display: none;
+    z-index: 60;
+    position: absolute;
+    top: 100px;
+}
+.active_box_one{
+    /*position: absolute;*/
+    /*left: -234px;*/
+    margin-left: -234px;
+}
+.active_box_two{
+    /*position: absolute;*/
+    /*left: -318px;*/
+    margin-left: -318px;
+}
+.active_box_three{
+    /*position: absolute;*/
+    /*left: -370px;*/
+    margin-left: -370px;
+}
+.active_box_four{
+    /*position: absolute;*/
+    /*left: -485px;*/
+    margin-left: -485px;
+}
+.active_box_five{
+    /*position: absolute;*/
+    /*left: -537px;*/
+    margin-left: -537px;
+}
+.active_box_six{
+    /*position: absolute;*/
+    /*left: -635px;*/
+    margin-left: -635px;
+}
+.active_box_seven{
+    /*position: absolute;*/
+    /*left: -703px;*/
+    margin-left: -703px;
+}
+
+/*       下拉框中   ul 的父盒子  的样式     */
+.active_box .active{
+    width: 1227px;
+    height: 200px;
+    margin: 0 auto;
+}
+/*       下拉框   ul的样式      */
+.active_box .active .active_ul{
+    list-style: none;
+    width: 1224px;
+    height: 200px;
+    font-size: 12px;
+    margin: 0 auto;
+    /*background-color: gainsboro;*/
+}
+/*       下拉框   li  的样式      */
+.active_box .active .active_ul .first{
+    width: 204px;
+    height: 200px;
+    float: left;
+    text-align: center;
+}
+/*          下拉框里 最上边的小盒子               */
+.active_box .active .active_ul .first .first_head{
+    width: 62px;
+    height: 18px;
+    line-height: 18px;
+    margin: 0 auto;
+    border: 1px solid #ff6700;
+    color: #ff6700;
+}
+/*          隐藏下拉框里 最上边的小盒子               */
+.active_box .active .active_ul .first .first_head_none{
+    visibility: hidden;
+}
+/*           下拉框里的图片                    */
+.active_box .active .active_ul .first .first_img{
+    width: 160px;
+    height: 110px;
+    margin: 15px auto;
+}
+.active_box .active .active_ul .first .first_img a img{
+    width: 160px;
+    height: 110px;
+}
+/*          下拉框里 最下边的产品名称及价格               */
+.active_box .active .active_ul .first .first_title{
+    width: 204px;
+    height: 40px;
+    color: #ff6700;
+    font-size: 12px;
+}
+/*          下拉框里 最下边的产品名称               */
+.active_box .active .active_ul .first .first_title a{
+    text-decoration: none;
+    display: block;
+    width: 204px;
+    height: 20px;
+    color: black;
+    line-height: 20px;
+    text-align: center;
+}
+/*          下拉框里 最下边的 价格               */
+.active_box .active .active_ul .first .first_title .title_span{
+    display: block;
+    width: 204px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+/*            右边小分割线           */
+.active_box .active .active_ul .first .first_right{
+    width: 1px;
+    height: 100px;
+    background-color: #e0e0e0;
+    float: right;
+    margin-top: -165px;
+}
+
+
+
+
+
+
+
+/*-------------------         轮播图         --------------------------*/
+
+.carousel_box{
+    width: 1226px;
+    height: 460px;
+    margin: 0 auto;
+    z-index: 50;
+    background: #fafafa;
+    /*background: url("img/01.jpg") no-repeat;*/
+
+}
+.carousel_middle{
+    height: 460px;
+    position: relative;
+}
+/*    轮播图 侧边栏样式      */
+.carousel_middle .sidebar {
+    width: 234px;
+    height: 460px;
+    background: rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 50;
+}
+.carousel_middle .sidebar ul{
+    list-style: none;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+.carousel_middle .sidebar ul li{
+    width: 194px;
+    height: 42px;
+    color: #fff;
+    cursor: pointer;
+    line-height: 42px;
+    padding: 0 20px;
+}
+.carousel_middle .sidebar ul li:hover {
+    background-color: #ff6700;
+}
+/*    侧边栏 li 里的  a 标签      */
+.carousel_middle .sidebar ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/*   侧边栏  li 里的 span 标签      */
+.carousel_middle .sidebar ul li span{
+    float: right;
+}
+
+
+
+/*     -------         侧边栏中的商品栏      ----------   */
+
+/* ---------       当侧边栏中的商品栏为  一  栏时            ----------*/
+.carousel_middle .sidebar .list li .sidebar_table_one{
+    width: 260px;
+    height: 458px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+    font-size: 14px;
+    position: absolute;
+    top: -20px;
+    left: 234px;
+    z-index: 40;
+    display: none;
+}
+
+/* ---------       当侧边栏中的商品栏为  二  栏时            ----------*/
+.carousel_middle .sidebar .list li .sidebar_table_two{
+    width: 520px;
+    height: 458px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+    font-size: 14px;
+    position: absolute;
+    top: -20px;
+    left: 234px;
+    z-index: 40;
+    display: none;
+}
+
+/* ---------       当侧边栏中的商品栏为  三  栏时            ----------*/
+.carousel_middle .sidebar .list li .sidebar_table_three{
+    width: 780px;
+    height: 458px;
+    background-color: #fff;
+    /*background-color: green;*/
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+    font-size: 14px;
+    position: absolute;
+    top: -20px;
+    left: 234px;
+    z-index: 40;
+    display: none;
+}
+
+
+.carousel_middle .sidebar .list li .sidebar_table ul{
+    list-style: none;
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 460px;
+    width: 260px;
+}
+.carousel_middle .sidebar .list li .sidebar_table .ul_one{
+    float: left;
+}
+.carousel_middle .sidebar .list li .sidebar_table .ul_two{
+    float: left;
+}
+.carousel_middle .sidebar .list li .sidebar_table .ul_three{
+    float: left;
+}
+.carousel_middle .sidebar .list li .sidebar_table ul li{
+    width: 220px;
+    height: 70px;
+    line-height: 70px;
+
+}
+.carousel_middle .sidebar .list li .sidebar_table ul li:hover{
+    background-color: #fff;
+}
+.carousel_middle .sidebar .list li .sidebar_table ul li a{
+    color: black;
+    width: 170px;
+    height: 70px;
+    float: left;
+}
+.carousel_middle .sidebar .list li .sidebar_table ul li a:hover{
+    color: #ff6700;
+}
+.carousel_middle .sidebar .list li .sidebar_table ul li a img{
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+}
+.carousel_middle .sidebar .list li .sidebar_table ul li a span{
+    /*margin-right: 85px;*/
+    /*background-color: #f0ad4e;*/
+    width: 126px;
+}
+.carousel_middle .sidebar .list li .sidebar_table ul li a.purchase{
+    color: #ff6700;
+    text-align: center;
+    line-height: 20px;
+    width: 48px;
+    height: 20px;
+    border: 1px solid #ff6700;
+    margin-top: 25px;
+}
+.carousel_middle .sidebar .list li .sidebar_table ul li a.purchase:hover{
+    background-color: #ff6700;
+    color: white;
+}
+
+
+
+/*     ---------      轮播图侧边栏结束             ------------        */
+
+
+/*     -******      切图按钮      **********---        */
+
+.button{
+    position: relative;
+    z-index: 30;
+}
+.button span{
+    display: inline-block;
+    width: 40px;
+    height: 70px;
+    color: #757575;
+    font-size: 30px;
+    text-align: center;
+    line-height: 70px;
+    cursor: pointer;
+    position: absolute;
+    top: -270px;
+}
+.button .prev{
+    left: 234px;
+    background: url(http://c1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat -84px 50%;
+}
+.button .prev:hover {
+    background: url(http://c1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat 0px 50%;
+}
+.button .next{
+    left: 1186px;
+    background: url(http://c1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat -124px 50%;
+}
+.button .next:hover {
+    background: url(http://c1.mifile.cn/f/i/2014/cn/icon/icon-slides.png) no-repeat -42px 50%;
+}
+
+/*     -******      轮播图开始      **********---        */
+
+.rotate{
+    width: 1226px;
+    height: 460px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    overflow: hidden;
+}
+.rotate ul {
+    list-style: none;
+    width: 7356px;
+}
+.rotate ul li{
+    float: left;
+}
+
+/*   ----------       ol 样式          -------------*/
+
+.rotate ol{
+    width: 81px;
+    height: 22px;
+    /*background-color: #f5e79e;*/
+    z-index: 60;
+    position: absolute;
+    right: 40px;
+    bottom: 15px;
+    list-style: none;
+}
+.rotate ol li{
+    width: 8px;
+    height: 8px;
+    float: left;
+    border-radius: 8px;
+    border: 2px solid chartreuse;
+    margin: 5px 0 5px 5px;
+    cursor: pointer;
+    background-color: antiquewhite;
+}
+.rotate ol .ol_li_show{
+    background-color: blueviolet;
+}
+
+
+
+/* ---------      轮播图下方商品栏     --------*/
+
+.commodity_box{
+    width: 1226px;
+    height: 170px;
+    margin: 20px auto 40px;
+}
+/*-------      家具列表      --------*/
+.commodity_box .home_list{
+    width: 234px;
+    height: 170px;
+    background-color: #5f5750;
+    float: left;
+}
+.commodity_box .home_list ul {
+    list-style: none;
+    position: relative;
+}
+.commodity_box .home_list ul li {
+    float: left;
+    width: 78px;
+    height: 85px;
+    font-size: 15px;
+}
+.commodity_box .home_list ul li a{
+    text-decoration: none;
+    color: rgba(255,255,255,0.7);
+    display: block;
+    width: 30px;
+    height: 45px;
+    margin: 20px 0 0 20px;
+}
+.commodity_box .home_list ul li a:hover{
+    color: white;
+}
+/*  -----      分割线         -------  */
+.commodity_box .home_list ul .span_right{
+    display: block;
+    width: 1px;
+    height: 70px;
+    background-color: #665e57;
+    position: absolute;
+    top: 8px;
+}
+
+.commodity_box .home_list ul .span_top{
+    display: block;
+    width: 70px;
+    height: 1px;
+    background-color: #665e57;
+    position: absolute;
+    top: 84px;
+}
+/*----         推荐商品      --------*/
+.commodity_box .homePromo{
+    height: 170px;
+    float: left;
+}
+.commodity_box .homePromo ul{
+    list-style: none;
+    width: 992px;
+    height: 170px;
+    /*background-color: #666666;*/
+}
+.commodity_box .homePromo ul li{
+    width: 316px;
+    height: 170px;
+    background-color: cadetblue;
+    float: left;
+    margin-left: 14px;
+}
+.commodity_box .homePromo ul li img{
+    width: 316px;
+    height: 170px;
+}
+.commodity_box .homePromo ul li img:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+
+
+/*   -------------            小米明星单品               ---------------    */
+.xm_container_box {
+    width: 1226px;
+    height: 438px;
+    margin: 0 auto;
+}
+/*        title       */
+.xm_container_box .container_hd{
+    width: 1226px;
+    height: 58px;
+    position: relative;
+}
+.xm_container_box .container_hd .title{
+    line-height: 58px;
+    font-weight: 200;
+    font-size: 22px;
+    color: #333;
+}
+/*        按钮         */
+.xm_container_box .container_hd .container_button{
+    width: 70px;
+    height: 24px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    border: 1px solid #E0E0E0;
+    border-left: none;
+}
+.xm_container_box .container_hd .container_button span{
+    display: inline-block;
+    width: 34px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border-left: 1px solid #E0E0E0;
+    font-size: 24px;
+    cursor: pointer;
+    color: #E0E0E0;
+    font-weight: 300;
+}
+
+.colour{
+    color: #b0b0b0 !important;
+}
+
+
+
+
+/*          内容          */
+.xm_container_box .container_content{
+    /*width: 1226px;*/
+    height: 380px;
+    position: relative;
+    /*background-color: #fcf8e3;*/
+    overflow: hidden;
+}
+.xm_container_box .container_content .container{
+    width: 1226px;
+    height: 340px;
+    /*background-color: #E0E0E0;*/
+}
+.xm_container_box .container_content .container ul{
+    width: 2480px;
+    height: 340px;
+    list-style: none;
+    position: absolute;
+    left: 0;
+}
+.xm_container_box .container_content .container ul li{
+    width: 234px;
+    height: 300px;
+    background-color: #fafafa;
+    padding-top: 39px;
+    text-align: center;
+    margin-right: 14px;
+    float: left;
+}
+/*         图片        */
+.xm_container_box .container_content .container ul li a{
+    display: block;
+    width: 160px;
+    height: 166px;
+    text-decoration: none;
+    color: #333;
+    margin: 0 auto 22px;
+}
+.xm_container_box .container_content .container ul li a img {
+    width: 160px;
+    height: 166px;
+}
+/*           标题         */
+.xm_container_box .container_content .container ul li span a{
+    width: 200px;
+    height: 20px;
+    /*background-color: violet;*/
+    margin: 0 auto 3px;
+}
+/*       介绍          */
+.xm_container_box .container_content .container ul li p{
+    display: block;
+    height: 18px;
+    font-size: 12px;
+    color: #b0b0b0;
+    margin: 0 20px 12px;
+    /*     css3  隐藏行内多余文本，并隐藏，然后加上省略号     */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.xm_container_box .container_content .container ul li span{
+    color: #ff6700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仿游乐场摩天轮特效</title>
+    <style>
+        div.wheel{
+            margin: 50px auto;
+            width: 600px;
+            height: 600px;
+            /*  由于背景图重设了宽高，所有需要重新固定中心点  */
+            transform-origin: 50% 50%;
+            position: relative;
+            animation: clockwise 1000s;
+        }
+        img:nth-child(2){
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -85px;
+            transform-origin: top center;
+            -webkit-animation: anticlockwise 1000s;
+            -o-animation: anticlockwise 1000s;
+            animation: anticlockwise 1000s;
+        }
+        img:nth-child(3){
+            position: absolute;
+            left: 450px;
+            top: 50%;
+            margin-top: -85px;
+            transform-origin: top center;
+            -webkit-animation: anticlockwise 1000s;
+            -o-animation: anticlockwise 1000s;
+            animation: anticlockwise 1000s;
+        }
+        img:nth-child(4){
+            position: absolute;
+            left: 50%;
+            margin-left: -65px;
+            bottom: -125px;
+            transform-origin: top center;
+            -webkit-animation: anticlockwise 1000s;
+            -o-animation: anticlockwise 1000s;
+            animation: anticlockwise 1000s;
+        }
+        @keyframes clockwise {
+            form{
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            to{
+                -webkit-transform: rotate(36000deg);
+                -moz-transform: rotate(36000deg);
+                -ms-transform: rotate(36000deg);
+                -o-transform: rotate(36000deg);
+                transform: rotate(36000deg);
+            }
+        }
+        @keyframes anticlockwise {
+            form{
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            to{
+                -webkit-transform: rotate(-36000deg);
+                -moz-transform: rotate(-36000deg);
+                -ms-transform: rotate(-36000deg);
+                -o-transform: rotate(-36000deg);
+                transform: rotate(-36000deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="wheel">
+    <img src="images/fsw.png" width="600" height="600" alt="">
+    <img src="images/girl.png" alt="">
+    <img src="images/shamegirl.png" alt="">
+    <img src="images/boy.png" alt="">
+</div>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+@charset "utf-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+#phone {
+  width: 320px;
+  height: 600px;
+  background: #000;
+  margin: 20px auto;
+}
+#phone .top {
+  width: 320px;
+  height: 23px;
+  background: url("images/1.png");
+}
+#phone .title {
+  width: 320px;
+  height: 32px;
+  color: #F5F5F5;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  background: url("images/2.png");
+}
+#phone .singer {
+  width: 320px;
+  height: 40px;
+  color: #F5F5F5;
+  text-align: center;
+  font-size: 14px;
+  line-height: 40px;
+}
+#phone .play {
+  width: 190px;
+  height: 190px;
+  background: url("images/3.png");
+  margin: auto;
+  cursor: pointer;
+  border-radius: 50%;
+}
+#phone .rotate {
+  -webkit-animation: rot 10s linear infinite;
+  -o-animation: rot 10s linear infinite;
+  animation: rot 10s linear infinite;
+}
+#phone .lrc {
+  width: 300px;
+  height: 280px;
+  margin: 20px auto;
+  color: #F5F5F5;
+  font-size: 14px;
+  overflow: hidden;
+  text-align: center;
+  line-height: 20px;
+}
+#phone .lrc #content {
+  position: relative;
+}
+#phone .lrc p {
+  letter-spacing: 2px;
+}
+@keyframes rot {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
